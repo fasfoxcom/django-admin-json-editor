@@ -15,8 +15,8 @@
         }
     });
     {% if data %}
-        var json = {{ data|safe }};
-        {{ name }}_editor.setValue(json);
+        var json = "{{ data|safe }}";
+        {{ name }}_editor.setValue(JSON.parse(json));
     {% endif %}
 </script>
 
