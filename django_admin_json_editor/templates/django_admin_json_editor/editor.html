@@ -16,7 +16,7 @@
     });
     {% if data %}
         var json = "{{ data|safe }}";
-        {{ name }}_editor.setValue(JSON.parse(json.replace(/'/g, '"')));
+        {{ name }}_editor.setValue(JSON.parse(json.replace(/'/g, '"').replaceAll("True", "true").replaceAll("False", "false")));
     {% endif %}
 </script>
 
