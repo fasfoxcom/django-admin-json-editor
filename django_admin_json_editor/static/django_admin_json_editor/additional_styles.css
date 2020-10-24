@@ -6,6 +6,24 @@ h1 {
     font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
 }
 
+/* Cancel out Django styles that mess up with the formatting */
+
 .form-row {
     display: table-row;
 }
+
+#parameters_editor > div > h3 {
+    margin: 0;
+    padding-left: 0;
+}	
+
+#parameters_editor > div > h3 > label {
+    width: 0;
+}
+
+#parameters_editor {
+    padding: 5px 0;
+    float: left;
+}
+
+
